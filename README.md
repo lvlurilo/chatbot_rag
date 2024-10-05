@@ -13,26 +13,32 @@ Este projeto implementa um chatbot utilizando a arquitetura de RAG (Retrieval-Au
 * Docker  instalado;
 
 * Indice Criado no Pinecone. Sugestão de configuração de Indice:
+  ```
     name='chatbot-rag',
     dimension=1536,
     metric='cosine'
     region='us-east-1'
+  ```
 
 * Chaves de API para OpenAI e Pinecone:
     OpenAI API Key: Para gerar embeddings e respostas com ChatGPT.
     Pinecone API Key: Para armazenar e buscar embeddings de documentos.
 
 * Arquivo **.env** contendo as variáveis de ambiente necessárias. Ajuste as variáveis conforme suas credenciais:
+  ```
     OPENAI_API_KEY=seu_openai_api_key
     PINECONE_API_KEY=seu_pinecone_api_key
     PINECONE_INDEX_NAME=seu_pinecone_index_name
     AWS_REGION=aws_region_do_index_pinecone
+  ```
 
 
 ### Execução do Projeto
 Build e execute com Docker Compose:
 Na raiz do projeto, execute o seguinte comando para construir e rodar o contêiner:
+```
 docker-compose up --build
+```
 
 Após a execução, acesse a aplicação em localhost:8501 do seu navegador
 
